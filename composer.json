@@ -1,5 +1,5 @@
 {
-    "name": "react/http",
+    "name": "polyweb-cz/react-http",
     "description": "Event-driven, streaming HTTP client and server implementation for ReactPHP",
     "keywords": ["HTTP client", "HTTP server", "HTTP", "HTTPS", "event-driven", "streaming", "client", "server", "PSR-7", "async", "ReactPHP"],
     "license": "MIT",

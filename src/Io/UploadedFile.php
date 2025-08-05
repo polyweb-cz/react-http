@@ -76,10 +76,7 @@ final class UploadedFile implements UploadedFileInterface
         $this->mediaType = $mediaType;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getStream()
+    public function getStream(): StreamInterface
     {
         if ($this->error !== \UPLOAD_ERR_OK) {
             throw new RuntimeException('Cannot retrieve stream due to upload error');
@@ -88,42 +85,27 @@ final class UploadedFile implements UploadedFileInterface
         return $this->stream;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function moveTo($targetPath)
+    public function moveTo(string $targetPath): void
     {
        throw new RuntimeException('Not implemented');
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getSize()
+    public function getSize(): ?int
     {
         return $this->size;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getError()
+    public function getError(): int
     {
         return $this->error;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getClientFilename()
+    public function getClientFilename(): ?string
     {
         return $this->filename;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getClientMediaType()
+    public function getClientMediaType(): ?string
     {
         return $this->mediaType;
     }
